@@ -1,0 +1,42 @@
+{
+   "manifest_version": 3,
+   "name": "Backup Cuentas",
+   "description": "Guarda datos en una base de datos",
+   "version": "1.0",
+   "autor": "Luis",
+   "icons": {
+      "16": "icon.png"
+   },
+   "action": {
+      "default_popup": "index.html",
+      "default_title": "Save Data"
+   },
+   "permissions": [
+      "<all_urls>",
+      "storage",
+      "tabs",
+      "identity"
+   ],
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [
+      {
+         "matches": [
+            "<all_urls>"
+         ],
+         "js": [
+            "script.js",
+            "controller.js"
+         ]
+      }
+   ],
+   "host_permissions": [
+      "https://www.gooogle.com/*",
+      "https://*.firebaseio.com/",
+      "https://firebase.googleapis.com/"
+   ],
+   "content_security_policy": {
+      "extention_pages": "script-src 'self' 'unsafe-inline', controller.js"
+   }
+}
