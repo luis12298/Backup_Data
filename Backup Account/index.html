@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Autosave Account</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+   <div class="login-container">
+
+      <h2>Respaldar Cuenta</h2>
+      <div class="_input">
+         <input class="input" type="text" id="txtUsername" placeholder="Usuario o Correo" autocomplete="off">
+
+      </div>
+      <div class="_input">
+         <input class="input" type="text" id="txtPassword" placeholder="Contraseña" autocomplete="off">
+
+
+      </div>
+
+      <div class="_input">
+         <textarea class="input" name="" cols="25" rows="2" id="txtDescri"
+            placeholder="Descripción: Ej. Cuenta google"></textarea>
+
+      </div>
+      <div class="_input-a">
+         <a href="#" id="popup_datos">Mostrar Datos</a>
+         <button title="Limpiar datos" class="limpiar" id="btnLimpiar"> <img src="icons/icon.png" alt="Clear Data">
+         </button>
+      </div>
+      <button class="_guardar" type="button" id="btnGuardar">Guardar</button>
+      <button class="cuentas">Cuentas Registradas <img src="icons/arrow_down.png" alt="" srcset=""></button>
+      <input class="search" type="search" name="" id="" placeholder="Buscar Cuenta"><img src="icons/search.png" alt="">
+
+      <div class="hidden" id="tickets-container">
+
+      </div>
+
+   </div>
+
+   <script src="firebase/firebase-app-compat.min.js"></script>
+   <script src="firebase/firebase-database-compat.min.js"></script>
+   <script src="users.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale
+   =1.0">
+   <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+
+
+   <title>Datos</title>
+   <style>
+      ._input {
+         display: flex;
+         gap: 2px;
+         margin-bottom: 10px;
+      }
+
+      #txtBuscar {
+         width: 300px;
+         line-height: 18px;
+      }
+
+      table,
+      th,
+      td {
+         border: 1px solid;
+         border-collapse: collapse;
+      }
+
+      th {
+         cursor: pointer;
+      }
+
+      tbody tr:nth-child(even) {
+         background-color: #f2f2f2;
+      }
+
+      tbody tr:hover {
+         background: aliceblue;
+         cursor: pointer;
+      }
+   </style>
+</head>
+
+<body>
+   <h2>Registros</h2>
+   <div class="_input">
+      <input type="search" name="" id="txtBuscar" autocomplete="off">
+      <button id="btnExportar">Exportar Datos</button>
+   </div>
+   <table id="dgvDatos" class="display">
+      <thead>
+         <tr>
+            <th style="display: none;">Key</th>
+            <th tabindex="0">Id</th>
+            <th>Correo/Usuario</th>
+            <th>Contraseña</th>
+            <th>Descripcion</th>
+            <th>Acciones</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+               <div class="btn"></span></div>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <script src="firebase/firebase-app-compat.min.js"></script>
+   <script src="firebase/firebase-database-compat.min.js"></script>
+   <script src="filesaver/FileSaver.min.js"></script>
+   <script src="table/table.js"></script>
+   <script src="data.js" type="module"></script>
+</body>
+
+
+</html>
